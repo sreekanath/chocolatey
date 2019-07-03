@@ -1,0 +1,41 @@
+lokireddysri95810@gmail.com
+$srinu1234$
+/opt/apache-tomcat-8.5.20/webapps
+
+sudo apt-get install php7.0 libapache2-mod-php php-mcrypt php7.0-mysql
+
+
+apt-get install php mysql-server mysql-client php7.0-mysql libapache2-mod-auth-mysql php-mbstring php7.0-gd libapache2-mod-php7.0
+
+chocolaety installation in windows
+
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocoltey\bin"
+
+choco install googlechrome
+choco upgrade googlechrome
+choco install notepadplusplus
+choco install 7zip
+choco install jdk8
+choco install maven
+choco install tomcat
+choco install git
+choco install tortoisegit
+
+https://github.com/pdurbin/maven-hello-world.git
+
+
+Public DNS	ec2-34-204-88-124.compute-1.amazonaws.com
+User name	Administrator
+Password	
+fnJeR6)5iLIFYl*$uFh6L9-$blu(Oym$
+
+
+0dcfab6ae7f56540
+
+
+ e3b5d359d3743659
+
+
+
+
+
