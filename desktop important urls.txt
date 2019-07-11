@@ -1,5 +1,4 @@
-lokireddysri95810@gmail.com
-$srinu1234$
+
 /opt/apache-tomcat-8.5.20/webapps
 
 sudo apt-get install php7.0 libapache2-mod-php php-mcrypt php7.0-mysql
