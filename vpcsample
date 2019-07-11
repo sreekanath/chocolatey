@@ -1,0 +1,125 @@
+vpc
+
+ipv4 --  10.1.0.0/16
+
+vpc name : Devops-vpc
+
+public  ---10.1.1.0/24    --1a
+
+private  --  10.1.2.0/24   --1b
+
+
+
+PUBLIC ----NAT ----PRIVATE INSTANCE
+
+
+2 SUBNETS
+
+
+ROUTETABLE  
+
+NO ---PUBLIC ROUTETABLE ---IGW  ATTACHED PUBLIC SUBNET
+
+YES PRIAVTE   --NAT GAEWAY    ---SUBNET BUTTON --- ASSCOIATE WITH PRIAVTESUBNET 
+
+
+
+
+
+VPC  --ENBALE  ---EDIT DNS HOSTNAMES
+SUBNETS --PUBLIC SUBNET --ACTION --  MODIFYAUTO-ASSIGN IPSETTINGS --ENABLE    --WITHOUT THIS IT WILL NOT ENABLE PUBLICIP ADRESS
+
+EXAMPLE
+
+
+EC2 ---OURVPC    --PUBLICSUBNET  --PUBLICASSIGN AUTOMATICALLY WILL COME
+
+
+
+SECURTY ---SSH  --ANYWHERE
+        --HTTP---ANYWHERE
+
+
+LANUCH   --
+
+LANUCH SAME LIKE ANOTHER INSTANCE   -PUBLIC2
+
+
+PRIVATE INSTANCE ---
+
+SELECT PRIAVTE SUBNET --
+SECUITY GROUP ---    LANUCH saME   LIKE
+
+CREATE ANOTHER INSTANCE --OTHER VPC
+
+
+try to connect --priavte instance 
+try to connect public instance --- it will connect through putty
+
+
+
+try to connect public to priavte instance  within our nework  --copy pem   to publicinstance inside
+
+chmod 400 practise.pem
+
+
+now try to connect private instance to public subnet   -- it will connect 
+
+
+want o connect from perticular instance only what do how to restrict 
+
+ex-- try cnnect priavte instance not part of our network  form that instance     -- it will not connect -- byu this  we can get know with in our network public subnet peoplke only can connect priavte instnace
+
+scenerio:
+
+only perticuler public instance want to connect private 
+
+
+
+add priavte sg with pyublicinstance  --priavteipadress   ip/32  
+
+
+
+perticularipadress   ---     priavte instance want to connect apart form it will connect other public instance with in our network 
+
+by coomas multpile instncae
+
+
+
+another scenerio:   securityid paste in priavte instance sg
+
+
+apache connect scenerio:
+
+
+natgateway  and elasticip adress only it will cost   
+
+
+
+
+
+
+
+  
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
