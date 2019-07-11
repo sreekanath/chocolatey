@@ -8,6 +8,7 @@ sudo apt-get install php7.0 libapache2-mod-php php-mcrypt php7.0-mysql
 apt-get install php mysql-server mysql-client php7.0-mysql libapache2-mod-auth-mysql php-mbstring php7.0-gd libapache2-mod-php7.0
 
 chocolaety installation in windows
+https://chocolatey.org/docs/installation
 
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocoltey\bin"
 
