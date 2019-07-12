@@ -1,0 +1,162 @@
+vpc perring  :
+
+concept : 
+
+
+peering connection b/w two different VPCs but same regions, same AWS account.
+peering connection b/w two different VPCs but different regions, same AWS account.
+peering connection b/w two different VPCs but different AWS accounts.
+Scenario is, I want to connect from MU public instance to NV private instance. (second one from the above)
+
+Step-1: Created VPC/Subnet/RT/IGW/NAT in N.Virginia , and Mumbai regions.
+
+
+N.VERGINIA
+IPV4 CIDR BLOCK :  10.1.0.0/16
+VPCNAME :  NV-VPC
+
+PUBLICSUBNET  : 10.1.1.0/24     --1A   
+PRIVATE SUBNE T: 10.1.2.0/24    --1B
+
+
+ONE ELASTICIP ADRESS IN EC2 WITH IN SMAE REGION   ASSIGNED IN ELASTIC IPALLOCATION ID :
+
+CREATE
+
+ROUTE TABLE ---  PRIAVTE ROUTETBALE    --YES   ---SUBNET ASSOCATIONS ---EDIT SUBNET ASSOCIATIONS  --ASSOCATIATE WITH PRIAVTE SUBNET AND SAVE IT
+
+
+
+MUMBAI REGION :
+
+ONE ELASTIC IPADRESS IN EC2 INSTANCE
+IPV4 CIDR BLOCK :  10.2.0.0/16
+VPCNAME ; MU-VPC
+
+PUBLIC SUBNET :10.2.1.0/24
+
+AP-SOUTH -1A
+
+PRIAVTE SUBNET ---- 10.2.2.0/24  --1B
+
+ELASTICIPADRESS ALLOCATION 
+
+CREATE VPC
+ROUTE TABLE ---  PRIAVTE ROUTETBALE    --YES   ---SUBNET ASSOCATIONS ---EDIT SUBNET ASSOCIATIONS  --ASSOCATIATE WITH PRIAVTE SUBNET AND SAVE IT
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+EC2 UNDER N.VERGINIA
+
+UBUNTU 18.04
+SELECT NV VPC  AND PUBLICSUBNET SELECT 
+TAG: nv-public-instance
+
+same take private select priavte subnet smae vpc 
+
+tag: nv-private-instance
+
+
+for public instance default will come witrh out publicipadress so it cannot able to unserstand cmd .so need publicipadress where cmd will understand
+
+go to elasticipadress ---createipadress assigh to public instance
+
+now it can able to connect  through putty 
+excute below commands to change the hostname for instance
+sudo -i
+hostname nv-public-instance
+echo "nv-public-instance" > /etc/hostname
+exit
+exit
+
+copy pem file to public instanc e
+
+vi practise.pem
+chmod 400 practise.pem
+
+try to connect priavte instance form public instance thorugh putty 
+
+it will connect because same vpc  ..
+
+after connecting priavte instace run below commands to change the hostname 
+
+sudo -i
+hostname nv-private-instance
+echo "nv-private-instance" > /etc/hostname
+exit
+exit\
+
+north verginai vpc ready and machines are ready  ...........
+-----------------------------------------------------------------------------------------------------------------------------------
+mumbai region
+
+create instance --public   --tag   namer :  mu-public-instance  ---seg ; ssh 22
+
+create instance --priavte  --tag   name ;  mu-priavate-instance     -  ssh  22
+
+allaocte elasticipadress to public machine 
+
+now it can able to connect  through putty 
+excute below commands to change the hostname for instance
+sudo -i
+hostname mu-public-instance
+echo "mu-public-instance" > /etc/hostname
+exit
+exit
+
+copy pem file to public instanc e
+
+vi practise.pem
+chmod 400 practise.pem
+
+try to connect private instance form public instance thorugh putty 
+
+it will connect because same vpc  ..
+
+after connecting priavte instace run below commands to change the hostname 
+
+sudo -i
+hostname mu-private-instance
+echo "mu-private-instance" > /etc/hostname
+exit
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
