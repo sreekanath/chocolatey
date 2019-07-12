@@ -125,6 +125,131 @@ exit
 exit
 
 
+----------------------------------------------------------------------------
+
+
+scenerio starts now  :  instance from mupublic instance(requester)   connect  traget  priavte instance veriginia(appecetor  nad reciever)
+
+want to connect  mu --public --instnce  ---ceate pem file for   for nv ---public instance and give chmod 400  name.pem
+
+try to connect from  mu-public--instance inside with veriginia priavte instance  it will not connect
+
+due to  different vpc  regions and differnet regions it will not connect so vpc perring cam to picture 
+
+
+
+
+muMABI vpc     (requester)                                               |                            nvERGIA  vpc(accepetor)
+
+in vpc ---   peering connections---create peerring 
+
+peering connection name tag  :   MU-NV-VPC-PEERING
+VPC REQUEST HAVING DEFAULT ID :  VPC--048D556212BDCD
+
+SELECT ANOTHER VPC TO PEER WITH
+
+ACCOUNT : MY ACCOUNT (SELECT)
+
+REGION :  ANOTHER REGION
+
+SELECT: NORTHVERGIANA(  N.virigina(us-east-1))
+
+
+GO TO NORTHVERGIAN VPC ----   SELECT VPCID  : FOR NORTHVERGIA :  VPC-O425672D594E4F   copy and paste in
+
+mumbai vpc  ---   peering  -----   vpc acceptor --- vpc-04cc425672d594e4f
+
+create perring connection
+
+give  ok
+
+until we subnit request   now .now go to mumbai vpc go peering connection we cna see there pending acceptance in console running
+
+id like  pcx-05c15c2cc318c361  same id in mumbia requstor id we can see
+
+
+n.verigina  --vpc perring  --- select the zcceptanc  and go to action --acceptance click on it --yes accept resust
+
+change to active with green colour
+
+now mubai vpc peering change to active once accpeto accept 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+vpc peering established between thetwo different vpc still we are connecting the machine it will not connect because 
+
+we have rule  routetabl will not allow the other ip,s to priavte instance 
+
+so we have to 
+
+N.verginia vpc  --subnets ---go to priavtesubnet ---  copy privatesubnet range ---10.1.2.0/24
+
+mumbai vpc ---routetables ---no  ----publicsubnet  having internet gateway consider has public ---publicroute
+public route in mumbai
+bottom  ---routes tab
+edit routes  ----  10.1.2.0/24     peering connection
+
+edit routes:
+
+Destination      target
+10.2.0.0/16      local
+0.0.0.0/0        igw-0b57e48370bbbb39cc
+10.1.2.0/24     pcx-05c115c2318c361       -------- add  ---automatically vpc pering option will come in drop down
+
+save it
+---------------------------------------------------------------------------------------------------------------------------------
+
+go north verigina  private route table   ---no  ---public route  --igw
+
+                                         -- yes  ---priavte route   --nat
+                                         
+     select priavte route  ---  edit routes  --
+     
+     copy mumnai public subnet range  ---  10.2.1.0/24
+     
+     
+     go to vergia north  vpc  --- rotetable ---priavte route--yes --edit routes
+     
+     Destiantion                            target
+     
+     10.1.0.0/16                           local
+     0.0.0.0/0                            nat-04f9401
+     
+     10.2.1.0/24                          vpcpeeringselect  (pcx-05c11c2cc318c361)    ---save it 
+     
+     
+     set up completed  now we cna test connection
+     
+     ================================================================================================================================
+     
+     
+     now try to connect nv priavt instance with public instance in mumnbai it will connect
+     
+     
+     cidr not mach with other vpc
+     
+     
+     
+     
+     
+     
+                                         
+                                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
