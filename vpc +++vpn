@@ -1,0 +1,27 @@
+vpn   ---virtual private cloud
+
+first create one virtual private network vpc 
+
+
+create one windows machine try to do all the scenerio on the windoes mACHINE.
+
+
+GO TO VPC ---------LANCH VPC WIZARD    ---SELECT VPC WITH PUBLIC AND PRIVATE SUBNET.   --- 2ND OPTION IN CONSOLE.
+
+SETP:2   ---   CREATE ONE ELASTIC IP ADRESS IN EC2 CONSOLE TO ATTACH NAT GATEWAY.
+
+in vpc  ---- ipv4 cidr block ---10.1.0.0/16
+ipv6cidr block :  NO
+VPC NAME : VPCDEVOPS
+PUBLIC SUBNET NAME  : 10.1.1.0/24
+AVAILABILUTY ZONE : US-EAST-1A
+SELECT ---PUBLIC SUBNET
+
+PRIVATE SUBNET IPV4 ---10.1.2.0/24
+AVAILABILITY ZONE : US-EAST-1B
+SELECT --PRIAVTE SUBNET
+ELASTICIP ALLOCATION ID :  ELASTICIPADREESS AATACHED.
+
+CREATE VPC
+
+
