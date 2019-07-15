@@ -50,6 +50,85 @@ yes
 yes
 yes
 enter
+Admin  UI: https://34.229.160.187:943/admin   
+
+
+login page will come -- 
+
+
+login as   ---
+
+openvpnas@openvpnas2:~$  sudo passwd openvpn   --set the password in openvpn server 
+
+login vpn console ---openvpn with password 
+
+
+agree the butoon
+
+login vpn console with admin.
+
+go to usermanagement ---user permission --- add user name --- more settings pencil button click.
+
+
+local pssword :    1234 m -- set the password .
+
+
+
+ipadrss:9443/  --- to login the user to vpn console 
+
+https://34.229.160.187:943   ---- gieve user name and password 
+
+after login -- downlaod the softwrae which suitable for your os .--depends on laptop os running we can choose
+
+
+create public instance    with our vpc with public subnet ebnable public ip for that that 
+
+
+
+check in google browser : myipadress
+
+
+try to connect punblic instnace withthrough putty with out vpn
+
+it will connect ........
+SELECT OPEN VPN SERVER   SECURITY GROUP ID : sg-04536ebb45a9e1211
+
+AND PASTE IN PUBLIC INSTANCE SECURITY GROUPID :     AND SAVE IT
+
+AND TRY CONNECT PUBLIC INSTANCE THROUGH PUTTY IT WILL NOT CONNECT.
+
+TIMEOUT CONNECTION ERROR IT WILL SHOW WHILEW CONNECTING.
+
+windows taskbar after installing vpn software vpn icon will come click on that icon and connect it
+
+give open vpn  public ipadress  
+
+user name and password which you cretaded in the server .
+
+
+give yes
+
+and netwotk will connect with vpn
+
+check the ipadress now in browser  by my ipadress
+
+
+and try to connect public instance by connecting open vpnmn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
