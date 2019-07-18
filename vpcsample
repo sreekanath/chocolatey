@@ -70,7 +70,7 @@ want o connect from perticular instance only what do how to restrict
 
 ex-- try cnnect priavte instance not part of our network  form that instance     -- it will not connect -- byu this  we can get know with in our network public subnet peoplke only can connect priavte instnace
 
-scenerio:
+scenerio: vpc peering
 
 only perticuler public instance want to connect private 
 
